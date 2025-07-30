@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="main/images/k.png" alt="Kai Logo" width="120">
+  <img src="main/img/k.png" alt="Kai Logo" width="120">
 </p>
 
 # Kai
