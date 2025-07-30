@@ -4,127 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KAI - Odaklanmanın En Akıllı Yolu</title>
-    
     <script src="https://cdn.tailwindcss.com"></script>
-    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lexend:wght@700&display=swap" rel="stylesheet">
-
-    <style>
-        :root {
-            --color-background: #0A0A0A;
-            --color-background-translucent: rgba(10, 10, 10, 0.7);
-            --color-text-primary: #EAEAEA;
-            --color-text-secondary: #A3A3A3;
-            --color-accent: #3B82F6;
-            --color-accent-glow-1: #583B85;
-            --color-accent-glow-2: #2E638E;
-            --color-border: rgba(255, 255, 255, 0.1);
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--color-background);
-            color: var(--color-text-primary);
-            overflow-x: hidden;
-        }
-        
-        .font-logo {
-            font-family: 'Lexend', sans-serif;
-        }
-
-        header {
-            position: sticky;
-            top: 0;
-            z-index: 50;
-            background-color: var(--color-background-translucent);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-        }
-        
-        header::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 1px;
-            background: linear-gradient(to right, rgba(59, 130, 246, 0), var(--color-accent), rgba(59, 130, 246, 0));
-            opacity: 0.5;
-        }
-
-        header nav a {
-            color: var(--color-text-secondary);
-        }
-
-        .language-menu {
-            transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
-        }
-        
-        .mobile-nav {
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .aurora-background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            mix-blend-mode: color-dodge;
-            pointer-events: none;
-            z-index: 1;
-        }
-
-        .aurora-background::before {
-            content: '';
-            position: absolute;
-            width: 800px;
-            height: 600px;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            background-image: radial-gradient(circle, var(--color-accent-glow-1) 0%, transparent 60%);
-            animation: aurora-glow 15s linear infinite alternate;
-        }
-        
-        .aurora-background::after {
-            content: '';
-            position: absolute;
-            width: 600px;
-            height: 600px;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            background-image: radial-gradient(circle, var(--color-accent-glow-2) 0%, transparent 60%);
-            animation: aurora-glow-2 20s linear infinite alternate;
-        }
-
-        @keyframes aurora-glow {
-            0% { transform: translate(-30%, -40%) scale(1); opacity: 0.4; }
-            50% { transform: translate(-60%, -60%) scale(1.2); opacity: 0.6; }
-            100% { transform: translate(-30%, -40%) scale(1); opacity: 0.4; }
-        }
-
-        @keyframes aurora-glow-2 {
-            0% { transform: translate(30%, 40%) scale(1.2); opacity: 0.3; }
-            50% { transform: translate(60%, 20%) scale(1); opacity: 0.5; }
-            100% { transform: translate(30%, 40%) scale(1.2); opacity: 0.3; }
-        }
-
-    </style>
+    <link rel="stylesheet" href="main/css/style.css"></link>
 </head>
 <body>
     <header>
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
                 <div class="flex items-center space-x-8">
-                    <a href="/" class="font-logo text-2xl font-bold tracking-tighter">KAI</a>
+                    <a href="/" class="font-logo text-2xl font-bold tracking-tighter">KAI<sup>beta</sup></a>
                     <nav class="hidden md:flex space-x-6">
                         <a href="#features" class="text-sm font-medium hover:text-white transition-colors">Özellikler</a>
-                        <a href="#about" class="text-sm font-medium hover:text-white transition-colors">Hakkında</a>
-                        <a href="#pricing" class="text-sm font-medium hover:text-white transition-colors">Fiyatlandırma</a>
+                        <a href="#teamwork" class="text-sm font-medium hover:text-white transition-colors">Ekip Çalışması</a>
+                        <a href="#faq" class="text-sm font-medium hover:text-white transition-colors">S.S.S.</a>
                     </nav>
                 </div>
                 <div class="flex items-center space-x-4">
@@ -136,14 +31,14 @@
                         </button>
                         <div id="language-menu" class="language-menu origin-top-right absolute right-0 mt-2 w-32 rounded-md shadow-lg bg-[#181818]/95 backdrop-blur-sm ring-1 ring-white/10 focus:outline-none opacity-0 transform scale-95 pointer-events-none" role="menu" aria-orientation="vertical" aria-labelledby="lang-menu-button">
                             <div class="py-1" role="none">
-                                <a href="?lang=tr" class="text-gray-300 block px-4 py-2 text-sm hover:bg-white/10" role="menuitem">Türkçe</a>
-                                <a href="?lang=en" class="text-gray-300 block px-4 py-2 text-sm hover:bg-white/10" role="menuitem">English</a>
+                                <a href="?lang=tr" class="block px-4 py-2 text-sm" style="color: var(--color-text-primary); background-color: transparent;" onmouseover="this.style.backgroundColor='var(--color-surface-hover)'" onmouseout="this.style.backgroundColor='transparent'" role="menuitem">Türkçe</a>
+                                <a href="?lang=en" class="block px-4 py-2 text-sm" style="color: var(--color-text-primary); background-color: transparent;" onmouseover="this.style.backgroundColor='var(--color-surface-hover)'" onmouseout="this.style.backgroundColor='transparent'" role="menuitem">English</a>
                             </div>
                         </div>
                     </div>
-                    <a href="/app" class="hidden sm:block bg-white/90 text-black text-sm font-semibold px-4 py-2 rounded-md hover:bg-white transition-colors">Uygulamaya Git</a>
+                    <a href="/app" class="hidden sm:block text-sm font-semibold px-4 py-2 rounded-md transition-colors" style="background-color: var(--color-button-primary-bg); color: var(--color-button-primary-text);" onmouseover="this.style.backgroundColor='var(--color-button-primary-hover-bg)'" onmouseout="this.style.backgroundColor='var(--color-button-primary-bg)'">Uygulamaya Git</a>
                     <div class="md:hidden">
-                        <button id="mobile-menu-button" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                        <button id="mobile-menu-button" type="button" class="inline-flex items-center justify-center p-2 rounded-md hover:bg-white/10" style="color: var(--color-text-secondary);" onmouseover="this.style.color='var(--color-text-primary)'" onmouseout="this.style.color='var(--color-text-secondary)'">
                             <span class="sr-only">Menüyü aç</span>
                             <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -153,12 +48,12 @@
                 </div>
             </div>
         </div>
-        <div id="mobile-nav" class="mobile-nav md:hidden absolute top-16 inset-x-0 bg-gray-900/95 p-4 transform -translate-y-[120%] border-b border-white/10">
+        <div id="mobile-nav" class="mobile-nav md:hidden absolute top-16 inset-x-0 bg-gray-900/95 p-4 transform -translate-y-[120%] border-b" style="border-color: var(--color-border);">
             <nav class="flex flex-col space-y-4">
-                <a href="#features" class="text-base font-medium text-gray-300 hover:text-white transition-colors px-2 py-1 rounded-md">Özellikler</a>
-                <a href="#about" class="text-base font-medium text-gray-300 hover:text-white transition-colors px-2 py-1 rounded-md">Hakkında</a>
-                <a href="#pricing" class="text-base font-medium text-gray-300 hover:text-white transition-colors px-2 py-1 rounded-md">Fiyatlandırma</a>
-                <a href="/app" class="w-full text-center bg-white text-black text-sm font-semibold px-4 py-2.5 rounded-md hover:bg-gray-200 transition-colors mt-4">Uygulamaya Git</a>
+                <a href="#features" class="text-base font-medium hover:text-white transition-colors px-2 py-1 rounded-md" style="color: var(--color-text-secondary);">Özellikler</a>
+                <a href="#teamwork" class="text-base font-medium hover:text-white transition-colors px-2 py-1 rounded-md" style="color: var(--color-text-secondary);">Ekip Çalışması</a>
+                <a href="#faq" class="text-base font-medium hover:text-white transition-colors px-2 py-1 rounded-md" style="color: var(--color-text-secondary);">S.S.S.</a>
+                <a href="/app" class="w-full text-center text-sm font-semibold px-4 py-2.5 rounded-md transition-colors mt-4" style="background-color: var(--color-button-primary-bg); color: var(--color-button-primary-text);" onmouseover="this.style.backgroundColor='var(--color-button-primary-hover-bg)'" onmouseout="this.style.backgroundColor='var(--color-button-primary-bg)'">Uygulamaya Git</a>
             </nav>
         </div>
     </header>
@@ -173,10 +68,10 @@
                 Pomodoro tekniği ve Kanban panolarının gücünü birleştirerek verimliliğinizi zirveye taşıyın. Görevlerinize odaklanın, projelerinizi kolayca yönetin.
             </p>
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="/app" class="w-full sm:w-auto bg-white/90 text-black font-semibold px-6 py-3 rounded-md hover:bg-white transition-colors flex items-center justify-center">
+                <a href="/app" class="w-full sm:w-auto font-semibold px-6 py-3 rounded-md transition-colors flex items-center justify-center" style="background-color: var(--color-button-primary-bg); color: var(--color-button-primary-text);" onmouseover="this.style.backgroundColor='var(--color-button-primary-hover-bg)'" onmouseout="this.style.backgroundColor='var(--color-button-primary-bg)'">
                     Ücretsiz Başla
                 </a>
-                <a href="#features" class="w-full sm:w-auto bg-white/10 text-white font-medium px-6 py-3 rounded-md hover:bg-white/20 transition-colors flex items-center justify-center">
+                <a href="#features" class="w-full sm:w-auto font-medium px-6 py-3 rounded-md transition-colors flex items-center justify-center" style="background-color: var(--color-button-secondary-bg); color: var(--color-text-primary);" onmouseover="this.style.backgroundColor='var(--color-button-secondary-hover-bg)'" onmouseout="this.style.backgroundColor='var(--color-button-secondary-bg)'">
                     Daha Fazla Bilgi
                     <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                 </a>
@@ -185,12 +80,12 @@
 
         <section id="preview" class="relative z-10 pb-20 md:pb-32">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="relative mx-auto max-w-5xl rounded-xl shadow-2xl" style="background: #111; border: 1px solid var(--color-border);">
+                <div class="relative mx-auto max-w-5xl rounded-xl shadow-2xl" style="background-color: var(--color-surface); border: 1px solid var(--color-border);">
                     <div class="flex items-center p-3 border-b" style="border-color: var(--color-border);">
                         <div class="flex space-x-1.5">
-                            <div class="w-3 h-3 rounded-full bg-red-500/50"></div>
-                            <div class="w-3 h-3 rounded-full bg-yellow-500/50"></div>
-                            <div class="w-3 h-3 rounded-full bg-green-500/50"></div>
+                            <div class="w-3 h-3 rounded-full" style="background-color: #f87171;"></div>
+                            <div class="w-3 h-3 rounded-full" style="background-color: #fbbd23;"></div>
+                            <div class="w-3 h-3 rounded-full" style="background-color: #34d399;"></div>
                         </div>
                     </div>
                     <div class="p-4 md:p-6 grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-6">
@@ -198,29 +93,29 @@
                             <div class="space-y-4">
                                 <h3 class="text-sm font-semibold" style="color: var(--color-text-secondary);">Yapılacaklar</h3>
                                 <div class="preview-card space-y-3">
-                                    <div class="bg-gray-800/50 p-3 rounded-lg text-sm">Landing Page Tasarımı</div>
-                                    <div class="bg-gray-800/50 p-3 rounded-lg text-sm">API Entegrasyonu</div>
+                                    <div class="p-3 rounded-lg text-sm" style="background-color: var(--color-surface-light);">Landing Page Tasarımı</div>
+                                    <div class="p-3 rounded-lg text-sm" style="background-color: var(--color-surface-light);">API Entegrasyonu</div>
                                 </div>
                             </div>
                             <div class="space-y-4">
                                 <h3 class="text-sm font-semibold" style="color: var(--color-text-secondary);">Yapılıyor</h3>
                                 <div class="preview-card space-y-3">
-                                    <div class="bg-gray-800/50 p-3 rounded-lg text-sm">Veritabanı Şeması</div>
+                                    <div class="p-3 rounded-lg text-sm" style="background-color: var(--color-surface-light);">Veritabanı Şeması</div>
                                 </div>
                             </div>
                             <div class="space-y-4">
                                 <h3 class="text-sm font-semibold" style="color: var(--color-text-secondary);">Bitti</h3>
                                 <div class="preview-card space-y-3">
-                                    <div class="bg-gray-800/50 p-3 rounded-lg text-sm opacity-60">Proje Kurulumu</div>
+                                    <div class="p-3 rounded-lg text-sm opacity-60" style="background-color: var(--color-surface-light);">Proje Kurulumu</div>
                                 </div>
                             </div>
                         </div>
-                        <div class="md:col-span-1 flex flex-col items-center justify-center p-4 rounded-lg" style="background-color: rgba(255,255,255,0.03);">
+                        <div class="md:col-span-1 flex flex-col items-center justify-center p-4 rounded-lg" style="background-color: var(--color-surface-subtle);">
                              <h3 class="text-sm font-semibold mb-4" style="color: var(--color-text-secondary);">Odaklanma</h3>
                              <div class="relative w-24 h-24">
                                  <svg class="w-full h-full" viewBox="0 0 100 100">
-                                     <circle class="text-gray-700" stroke-width="7" stroke="currentColor" fill="transparent" r="45" cx="50" cy="50" />
-                                     <circle id="pomodoro-progress" class="text-blue-500" stroke-width="7" stroke-linecap="round" stroke="currentColor" fill="transparent" r="45" cx="50" cy="50" style="stroke-dasharray: 283; stroke-dashoffset: 70;"/>
+                                     <circle stroke-width="7" stroke="var(--color-border)" fill="transparent" r="45" cx="50" cy="50" />
+                                     <circle id="pomodoro-progress" stroke-width="7" stroke-linecap="round" stroke="var(--color-text-primary)" fill="transparent" r="45" cx="50" cy="50" style="stroke-dasharray: 283; stroke-dashoffset: 70;"/>
                                  </svg>
                                  <div class="absolute inset-0 flex items-center justify-center text-2xl font-bold">24:15</div>
                              </div>
@@ -229,6 +124,162 @@
                 </div>
             </div>
         </section>
+        
+        <section id="features" class="relative z-10 py-20 md:py-32">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-4">Her Şey Kontrol Altında</h2>
+                    <p class="text-lg" style="color: var(--color-text-secondary);">KAI, üretkenliğinizi artırmak için tasarlanmış güçlü araçlar sunar. Karmaşayı basitleştirin, hedeflerinize odaklanın.</p>
+                </div>
+                <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+                    <div class="interactive-card">
+                        <div class="interactive-card-content">
+                            <div class="flex justify-between items-start">
+                                <div class="inline-flex items-center justify-center w-12 h-12 rounded-lg" style="background-color: rgba(234, 234, 234, 0.1);">
+                                    <svg class="w-6 h-6" style="color: var(--color-text-primary);" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                </div>
+                                <svg class="arrow-icon w-5 h-5" style="color: var(--color-text-secondary);" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M12 5l7 7-7 7"></path></svg>
+                            </div>
+                            <h3 class="text-xl font-semibold mt-5 mb-2">Kesintisiz Odaklanma</h3>
+                            <p class="text-sm" style="color: var(--color-text-secondary);">Pomodoro tekniği ile dikkatinizi dağıtan unsurları ortadan kaldırın. Çalışma ve mola sürelerinizi kişiselleştirerek derin odaklanma seansları yapın.</p>
+                        </div>
+                    </div>
+                    <div class="interactive-card">
+                        <div class="interactive-card-content">
+                            <div class="flex justify-between items-start">
+                                <div class="inline-flex items-center justify-center w-12 h-12 rounded-lg" style="background-color: rgba(234, 234, 234, 0.1);">
+                                    <svg class="w-6 h-6" style="color: var(--color-text-primary);" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2"></path></svg>
+                                </div>
+                                <svg class="arrow-icon w-5 h-5" style="color: var(--color-text-secondary);" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M12 5l7 7-7 7"></path></svg>
+                            </div>
+                            <h3 class="text-xl font-semibold mt-5 mb-2">Görsel İş Akışı</h3>
+                            <p class="text-sm" style="color: var(--color-text-secondary);">Esnek Kanban panoları ile iş akışınızı 'Yapılacak', 'Yapılıyor' ve 'Bitti' olarak düzenleyin. Projelerinizdeki ilerlemeyi bir bakışta görün.</p>
+                        </div>
+                    </div>
+                    <div class="interactive-card">
+                        <div class="interactive-card-content">
+                            <div class="flex justify-between items-start">
+                                <div class="inline-flex items-center justify-center w-12 h-12 rounded-lg" style="background-color: rgba(234, 234, 234, 0.1);">
+                                    <svg class="w-6 h-6" style="color: var(--color-text-primary);" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path></svg>
+                                </div>
+                                <svg class="arrow-icon w-5 h-5" style="color: var(--color-text-secondary);" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M12 5l7 7-7 7"></path></svg>
+                            </div>
+                            <h3 class="text-xl font-semibold mt-5 mb-2">Verimlilik Analizi</h3>
+                            <p class="text-sm" style="color: var(--color-text-secondary);">Tamamladığınız görevleri ve odaklanma sürelerinizi analiz eden raporlarla verimliliğinizi ölçün. Nerede zaman kazandığınızı görün, daha iyi plan yapın.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="teamwork" class="relative z-10 py-20 md:py-32">
+             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="text-center lg:text-left">
+                        <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-4">Tek Başına Güçlü, Ekiple Daha Güçlü</h2>
+                        <p class="text-lg mb-8" style="color: var(--color-text-secondary);">KAI, bireysel verimliliğinizi artırırken, ekibinizin de aynı hedefe odaklanmasını sağlar. Projeleri birlikte yönetin, iletişimi güçlendirin ve başarıyı paylaşın.</p>
+                        <ul class="space-y-6">
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full" style="background-color: rgba(234, 234, 234, 0.1); color: var(--color-text-primary);">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.653-.121-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.653.121-1.283.356-1.857m0 0a3.002 3.002 0 012.288-2.542M12 12a3 3 0 110-6 3 3 0 010 6z"></path></svg>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-lg font-semibold">Paylaşılan Panolar</h4>
+                                    <p class="text-sm" style="color: var(--color-text-secondary);">Tüm ekibinizi aynı proje panosunda toplayın. Görevleri atayın, son teslim tarihlerini belirleyin ve ilerlemeyi birlikte takip edin.</p>
+                                </div>
+                            </li>
+                             <li class="flex items-start">
+                                <div class="flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full" style="background-color: rgba(234, 234, 234, 0.1); color: var(--color-text-primary);">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-lg font-semibold">Gerçek Zamanlı Güncellemeler</h4>
+                                    <p class="text-sm" style="color: var(--color-text-secondary);">Birisi bir kartı taşıdığında veya bir görevi tamamladığında herkes anında görür. Senkronizasyon sorunlarına ve "haberim yoktu" bahanelerine son.</p>
+                                </div>
+                            </li>
+                             <li class="flex items-start">
+                                <div class="flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full" style="background-color: rgba(234, 234, 234, 0.1); color: var(--color-text-primary);">
+                                   <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-lg font-semibold">Ekip Analitiği</h4>
+                                    <p class="text-sm" style="color: var(--color-text-secondary);">Ekibinizin toplam verimliliğini görün. Hangi projelerin daha fazla zaman aldığını analiz ederek kaynaklarınızı daha iyi planlayın.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="hidden lg:flex items-center justify-center">
+                        <div class="relative w-full max-w-md h-96">
+                             <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 rounded-full" style="background-color: var(--color-accent-glow-1); filter: blur(60px);"></div>
+                             <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 rounded-full" style="background-color: var(--color-accent-glow-2); filter: blur(60px); animation: aurora-glow 10s infinite alternate;"></div>
+                             <div class="floating-avatar absolute top-10 right-10 w-16 h-16 rounded-full border-2 p-1" style="border-color: var(--color-border);"><img class="w-full h-full rounded-full" src="https://placehold.co/64x64/111111/FFFFFF?text=A" alt="Avatar"></div>
+                             <div class="floating-avatar absolute bottom-10 left-10 w-20 h-20 rounded-full border-2 p-1" style="border-color: var(--color-border);"><img class="w-full h-full rounded-full" src="https://placehold.co/80x80/111111/FFFFFF?text=B" alt="Avatar"></div>
+                             <div class="floating-avatar absolute top-1/2 right-20 w-12 h-12 rounded-full border-2 p-1" style="border-color: var(--color-border);"><img class="w-full h-full rounded-full" src="https://placehold.co/48x48/111111/FFFFFF?text=C" alt="Avatar"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="relative z-10 py-20 md:py-32">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-4">Aklınıza Takılanlar</h2>
+                    <p class="text-lg" style="color: var(--color-text-secondary);">En çok merak edilen soruların cevaplarını burada bulabilirsiniz.</p>
+                </div>
+                <div class="mt-16 max-w-4xl mx-auto space-y-4">
+                    <div class="faq-item border rounded-lg" style="border-color: var(--color-border);">
+                        <details>
+                            <summary class="flex items-center justify-between p-6 cursor-pointer">
+                                <span class="font-semibold">KAI'nin ücretsiz bir sürümü var mı?</span>
+                                <svg class="w-5 h-5 transform transition-transform" style="color: var(--color-text-secondary);" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </summary>
+                            <div class="faq-content p-6 pt-0" style="color: var(--color-text-secondary);">
+                                Evet! KAI, temel Pomodoro ve Kanban özelliklerini içeren, bireysel kullanım için tamamen ücretsiz bir plan sunmaktadır. Ekip özellikleri ve gelişmiş analitikler için ücretli planlarımızı inceleyebilirsiniz.
+                            </div>
+                        </details>
+                    </div>
+                    <div class="faq-item border rounded-lg" style="border-color: var(--color-border);">
+                        <details>
+                            <summary class="flex items-center justify-between p-6 cursor-pointer">
+                                <span class="font-semibold">Verilerim güvende mi?</span>
+                                <svg class="w-5 h-5 transform transition-transform" style="color: var(--color-text-secondary);" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </summary>
+                            <div class="faq-content p-6 pt-0" style="color: var(--color-text-secondary);">
+                                Kesinlikle. Veri güvenliği en büyük önceliğimizdir. Tüm verileriniz endüstri standardı şifreleme yöntemleriyle korunmakta ve güvenli sunucularda saklanmaktadır. Verilerinizi asla üçüncü partilerle paylaşmayız.
+                            </div>
+                        </details>
+                    </div>
+                    <div class="faq-item border rounded-lg" style="border-color: var(--color-border);">
+                        <details>
+                            <summary class="flex items-center justify-between p-6 cursor-pointer">
+                                <span class="font-semibold">Hangi platformlarda kullanabilirim?</span>
+                                <svg class="w-5 h-5 transform transition-transform" style="color: var(--color-text-secondary);" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </summary>
+                            <div class="faq-content p-6 pt-0" style="color: var(--color-text-secondary);">
+                                KAI, modern bir web tarayıcısı olan tüm cihazlarda (masaüstü, tablet, mobil) sorunsuz bir şekilde çalışır. Ayrıca, gelecekte yerel masaüstü ve mobil uygulamalar geliştirmeyi planlıyoruz.
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cta" class="relative z-10 py-20 md:py-32">
+             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="relative text-center p-12 rounded-2xl overflow-hidden" style="background-color: var(--color-surface);">
+                    <div class="absolute inset-0" style="background: radial-gradient(circle at 50% 0%, rgba(59, 130, 246, 0.15), transparent 50%);"></div>
+                    <div class="relative">
+                        <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-4">Verimliliğinizi Bugün Yükseltin</h2>
+                        <p class="max-w-2xl mx-auto text-lg mb-8" style="color: var(--color-text-secondary);">Daha fazla ertelemeyin. KAI'ye ücretsiz katılın ve hedeflerinize ulaşmaya bir adım daha yaklaşın.</p>
+                        <a href="/app" class="inline-block font-semibold px-8 py-4 rounded-md transition-transform transform hover:scale-105" style="background-color: var(--color-button-primary-bg); color: var(--color-button-primary-text);">
+                            Hemen Ücretsiz Başla
+                        </a>
+                    </div>
+                </div>
+             </div>
+        </section>
+
     </main>
 
     <footer class="relative z-10 border-t" style="border-color: var(--color-border);">
@@ -268,7 +319,7 @@
 
             <div class="border-t pt-8 mt-8 flex flex-col-reverse sm:flex-row justify-between items-center" style="border-color: var(--color-border);">
                 <p class="text-sm mt-4 sm:mt-0" style="color: var(--color-text-secondary);">
-                    &copy; 2024 KAI. Tüm Hakları Saklıdır.
+                    &copy; 2025 KAI. Tüm Hakları Saklıdır.
                 </p>
                 <div class="text-sm" style="color: var(--color-text-secondary);">
                     powered by <a href="https://lumeworks.com" target="_blank" rel="noopener noreferrer" class="font-semibold text-white hover:underline">lumeworks</a>
@@ -279,73 +330,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            gsap.registerPlugin(ScrollTrigger);
-
-            const langMenuButton = document.getElementById('lang-menu-button');
-            const languageMenu = document.getElementById('language-menu');
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileNav = document.getElementById('mobile-nav');
-
-            if (langMenuButton) {
-                langMenuButton.addEventListener('click', function (event) {
-                    event.stopPropagation();
-                    const isHidden = languageMenu.classList.contains('opacity-0');
-                    if (isHidden) {
-                        languageMenu.classList.remove('opacity-0', 'scale-95', 'pointer-events-none');
-                        languageMenu.classList.add('opacity-100', 'scale-100');
-                    } else {
-                        languageMenu.classList.add('opacity-0', 'scale-95', 'pointer-events-none');
-                        languageMenu.classList.remove('opacity-100', 'scale-100');
-                    }
-                });
-            }
-
-            if (mobileMenuButton) {
-                mobileMenuButton.addEventListener('click', function () {
-                    const isHidden = mobileNav.classList.contains('-translate-y-[120%]');
-                    if (isHidden) {
-                        mobileNav.classList.remove('-translate-y-[120%]');
-                    } else {
-                        mobileNav.classList.add('-translate-y-[120%]');
-                    }
-                });
-            }
-
-            window.addEventListener('click', function () {
-                if (languageMenu && !languageMenu.classList.contains('opacity-0')) {
-                    languageMenu.classList.add('opacity-0', 'scale-95', 'pointer-events-none');
-                    languageMenu.classList.remove('opacity-100', 'scale-100');
-                }
-            });
-
-            const previewSection = document.querySelector('#preview');
-            if(previewSection) {
-                gsap.from(previewSection.querySelector('.relative.mx-auto'), {
-                    scrollTrigger: {
-                        trigger: previewSection,
-                        start: "top 80%",
-                    },
-                    opacity: 0,
-                    y: 50,
-                    duration: 0.8,
-                    ease: "power3.out"
-                });
-
-                gsap.from(previewSection.querySelectorAll('.preview-card > div'), {
-                     scrollTrigger: {
-                        trigger: previewSection,
-                        start: "top 70%",
-                    },
-                    opacity: 0,
-                    y: 30,
-                    duration: 0.6,
-                    stagger: 0.1,
-                    ease: "power3.out"
-                });
-            }
-        });
-    </script>
+    <script src="main/js/script.js"></script>
+ 
 </body>
 </html>
