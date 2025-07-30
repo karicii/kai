@@ -5,41 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KAI - Odaklanmanın En Akıllı Yolu</title>
     
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Google Fonts: Inter & Lexend -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lexend:wght@700&display=swap" rel="stylesheet">
 
     <style>
-        /* CSS Değişkenleri (Custom Properties) */
         :root {
             --color-background: #0A0A0A;
             --color-background-translucent: rgba(10, 10, 10, 0.7);
             --color-text-primary: #EAEAEA;
-            --color-text-secondary: #A3A3A3; /* approx. text-gray-400 */
-            --color-accent: #3B82F6; /* blue-500 */
+            --color-text-secondary: #A3A3A3;
+            --color-accent: #3B82F6;
             --color-accent-glow-1: #583B85;
             --color-accent-glow-2: #2E638E;
             --color-border: rgba(255, 255, 255, 0.1);
         }
 
-        /* Temel stil ve font ayarları */
         body {
             font-family: 'Inter', sans-serif;
             background-color: var(--color-background);
             color: var(--color-text-primary);
-            overflow-x: hidden; /* Yatay scroll'u engelle */
+            overflow-x: hidden;
         }
         
-        /* Logo için özel font */
         .font-logo {
             font-family: 'Lexend', sans-serif;
         }
 
-        /* Header'ın scroll sırasında sabit kalması ve arkaplan bulanıklığı */
         header {
             position: sticky;
             top: 0;
@@ -49,7 +43,6 @@
             -webkit-backdrop-filter: blur(12px);
         }
         
-        /* Header altına gradient çizgi eklemek için pseudo-element */
         header::after {
             content: '';
             position: absolute;
@@ -61,22 +54,18 @@
             opacity: 0.5;
         }
 
-        /* Navigasyon linklerinin rengi */
         header nav a {
             color: var(--color-text-secondary);
         }
 
-        /* Dil değiştirme menüsü için animasyon */
         .language-menu {
             transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
         }
         
-        /* Mobil menü için animasyon */
         .mobile-nav {
             transition: transform 0.3s ease-in-out;
         }
 
-        /* Hero Section Arka Plan Efekti */
         .aurora-background {
             position: absolute;
             top: 0;
@@ -127,34 +116,24 @@
     </style>
 </head>
 <body>
-    <!-- Header Başlangıcı -->
     <header>
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
-                
-                <!-- Sol Taraf: Logo ve Navigasyon -->
                 <div class="flex items-center space-x-8">
-                    <!-- Logo -->
                     <a href="/" class="font-logo text-2xl font-bold tracking-tighter">KAI</a>
-                    
-                    <!-- Desktop Navigasyon -->
                     <nav class="hidden md:flex space-x-6">
                         <a href="#features" class="text-sm font-medium hover:text-white transition-colors">Özellikler</a>
                         <a href="#about" class="text-sm font-medium hover:text-white transition-colors">Hakkında</a>
                         <a href="#pricing" class="text-sm font-medium hover:text-white transition-colors">Fiyatlandırma</a>
                     </nav>
                 </div>
-
-                <!-- Sağ Taraf: Dil ve CTA -->
                 <div class="flex items-center space-x-4">
-                    <!-- Dil Değiştirme (Desktop) -->
                     <div class="relative hidden md:block">
                         <button id="lang-menu-button" type="button" class="flex items-center justify-center w-9 h-9 rounded-md hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900 focus:ring-white transition-colors">
                             <svg style="color: var(--color-text-secondary);" class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 21l5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 016-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C13.18 7.061 14.285 7 15 7s1.82.061 2.666.214m-2.666 0V3" />
                             </svg>
                         </button>
-                        <!-- Dil Menüsü Dropdown -->
                         <div id="language-menu" class="language-menu origin-top-right absolute right-0 mt-2 w-32 rounded-md shadow-lg bg-[#181818]/95 backdrop-blur-sm ring-1 ring-white/10 focus:outline-none opacity-0 transform scale-95 pointer-events-none" role="menu" aria-orientation="vertical" aria-labelledby="lang-menu-button">
                             <div class="py-1" role="none">
                                 <a href="?lang=tr" class="text-gray-300 block px-4 py-2 text-sm hover:bg-white/10" role="menuitem">Türkçe</a>
@@ -162,11 +141,7 @@
                             </div>
                         </div>
                     </div>
-
-                    <!-- CTA Butonu -->
                     <a href="/app" class="hidden sm:block bg-white/90 text-black text-sm font-semibold px-4 py-2 rounded-md hover:bg-white transition-colors">Uygulamaya Git</a>
-
-                    <!-- Mobil Menü Butonu -->
                     <div class="md:hidden">
                         <button id="mobile-menu-button" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                             <span class="sr-only">Menüyü aç</span>
@@ -178,8 +153,6 @@
                 </div>
             </div>
         </div>
-
-        <!-- Mobil Navigasyon (Gizli) -->
         <div id="mobile-nav" class="mobile-nav md:hidden absolute top-16 inset-x-0 bg-gray-900/95 p-4 transform -translate-y-[120%] border-b border-white/10">
             <nav class="flex flex-col space-y-4">
                 <a href="#features" class="text-base font-medium text-gray-300 hover:text-white transition-colors px-2 py-1 rounded-md">Özellikler</a>
@@ -189,13 +162,9 @@
             </nav>
         </div>
     </header>
-    <!-- Header Bitişi -->
 
-    <!-- Hero Section Başlangıcı -->
     <main class="relative overflow-hidden">
-        <!-- Aurora Arka Plan Efekti -->
         <div class="aurora-background"></div>
-
         <section class="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center pt-24 pb-32 md:pt-32 md:pb-40">
             <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tighter mb-6 bg-clip-text text-transparent bg-gradient-to-b from-white to-gray-400">
                 Odaklanmanın En Akıllı Yolu
@@ -213,14 +182,58 @@
                 </a>
             </div>
         </section>
-    </main>
-    <!-- Hero Section Bitişi -->
 
-    <!-- Footer Başlangıcı -->
+        <section id="preview" class="relative z-10 pb-20 md:pb-32">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="relative mx-auto max-w-5xl rounded-xl shadow-2xl" style="background: #111; border: 1px solid var(--color-border);">
+                    <div class="flex items-center p-3 border-b" style="border-color: var(--color-border);">
+                        <div class="flex space-x-1.5">
+                            <div class="w-3 h-3 rounded-full bg-red-500/50"></div>
+                            <div class="w-3 h-3 rounded-full bg-yellow-500/50"></div>
+                            <div class="w-3 h-3 rounded-full bg-green-500/50"></div>
+                        </div>
+                    </div>
+                    <div class="p-4 md:p-6 grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-6">
+                        <div class="md:col-span-3 grid grid-cols-3 gap-4 md:gap-6">
+                            <div class="space-y-4">
+                                <h3 class="text-sm font-semibold" style="color: var(--color-text-secondary);">Yapılacaklar</h3>
+                                <div class="preview-card space-y-3">
+                                    <div class="bg-gray-800/50 p-3 rounded-lg text-sm">Landing Page Tasarımı</div>
+                                    <div class="bg-gray-800/50 p-3 rounded-lg text-sm">API Entegrasyonu</div>
+                                </div>
+                            </div>
+                            <div class="space-y-4">
+                                <h3 class="text-sm font-semibold" style="color: var(--color-text-secondary);">Yapılıyor</h3>
+                                <div class="preview-card space-y-3">
+                                    <div class="bg-gray-800/50 p-3 rounded-lg text-sm">Veritabanı Şeması</div>
+                                </div>
+                            </div>
+                            <div class="space-y-4">
+                                <h3 class="text-sm font-semibold" style="color: var(--color-text-secondary);">Bitti</h3>
+                                <div class="preview-card space-y-3">
+                                    <div class="bg-gray-800/50 p-3 rounded-lg text-sm opacity-60">Proje Kurulumu</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="md:col-span-1 flex flex-col items-center justify-center p-4 rounded-lg" style="background-color: rgba(255,255,255,0.03);">
+                             <h3 class="text-sm font-semibold mb-4" style="color: var(--color-text-secondary);">Odaklanma</h3>
+                             <div class="relative w-24 h-24">
+                                 <svg class="w-full h-full" viewBox="0 0 100 100">
+                                     <circle class="text-gray-700" stroke-width="7" stroke="currentColor" fill="transparent" r="45" cx="50" cy="50" />
+                                     <circle id="pomodoro-progress" class="text-blue-500" stroke-width="7" stroke-linecap="round" stroke="currentColor" fill="transparent" r="45" cx="50" cy="50" style="stroke-dasharray: 283; stroke-dashoffset: 70;"/>
+                                 </svg>
+                                 <div class="absolute inset-0 flex items-center justify-center text-2xl font-bold">24:15</div>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
     <footer class="relative z-10 border-t" style="border-color: var(--color-border);">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-10 text-sm">
-                <!-- Sütun 1: Ürün -->
                 <div class="space-y-4">
                     <h3 class="font-semibold text-white">Ürün</h3>
                     <ul class="space-y-3">
@@ -229,7 +242,6 @@
                         <li><a href="/app" class="hover:text-white transition-colors" style="color: var(--color-text-secondary);">Giriş Yap</a></li>
                     </ul>
                 </div>
-                <!-- Sütun 2: Kaynaklar -->
                 <div class="space-y-4">
                     <h3 class="font-semibold text-white">Kaynaklar</h3>
                     <ul class="space-y-3">
@@ -238,7 +250,6 @@
                         <li><a href="#" class="hover:text-white transition-colors" style="color: var(--color-text-secondary);">Destek</a></li>
                     </ul>
                 </div>
-                <!-- Sütun 3: Şirket -->
                 <div class="space-y-4">
                     <h3 class="font-semibold text-white">Şirket</h3>
                     <ul class="space-y-3">
@@ -246,7 +257,6 @@
                         <li><a href="#" class="hover:text-white transition-colors" style="color: var(--color-text-secondary);">İletişim</a></li>
                     </ul>
                 </div>
-                <!-- Sütun 4: Yasal -->
                 <div class="space-y-4">
                     <h3 class="font-semibold text-white">Yasal</h3>
                     <ul class="space-y-3">
@@ -266,17 +276,18 @@
             </div>
         </div>
     </footer>
-    <!-- Footer Bitişi -->
 
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
+            gsap.registerPlugin(ScrollTrigger);
+
             const langMenuButton = document.getElementById('lang-menu-button');
             const languageMenu = document.getElementById('language-menu');
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mobileNav = document.getElementById('mobile-nav');
 
-            // Dil menüsünü aç/kapat
             if (langMenuButton) {
                 langMenuButton.addEventListener('click', function (event) {
                     event.stopPropagation();
@@ -291,7 +302,6 @@
                 });
             }
 
-            // Mobil menüyü aç/kapat
             if (mobileMenuButton) {
                 mobileMenuButton.addEventListener('click', function () {
                     const isHidden = mobileNav.classList.contains('-translate-y-[120%]');
@@ -309,8 +319,33 @@
                     languageMenu.classList.remove('opacity-100', 'scale-100');
                 }
             });
+
+            const previewSection = document.querySelector('#preview');
+            if(previewSection) {
+                gsap.from(previewSection.querySelector('.relative.mx-auto'), {
+                    scrollTrigger: {
+                        trigger: previewSection,
+                        start: "top 80%",
+                    },
+                    opacity: 0,
+                    y: 50,
+                    duration: 0.8,
+                    ease: "power3.out"
+                });
+
+                gsap.from(previewSection.querySelectorAll('.preview-card > div'), {
+                     scrollTrigger: {
+                        trigger: previewSection,
+                        start: "top 70%",
+                    },
+                    opacity: 0,
+                    y: 30,
+                    duration: 0.6,
+                    stagger: 0.1,
+                    ease: "power3.out"
+                });
+            }
         });
     </script>
-
 </body>
 </html>
