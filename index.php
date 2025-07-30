@@ -303,7 +303,6 @@
                 });
             }
 
-            // Dışarı tıklandığında menüleri kapat
             window.addEventListener('click', function () {
                 if (languageMenu && !languageMenu.classList.contains('opacity-0')) {
                     languageMenu.classList.add('opacity-0', 'scale-95', 'pointer-events-none');
