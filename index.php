@@ -11,14 +11,15 @@
     <link rel="stylesheet" href="main/css/style.css"></link>
 </head>
 <body>
-    <header>
+ <header>
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
                 <div class="flex items-center space-x-8">
-                    <a href="/" class="font-logo text-2xl font-bold tracking-tighter">KAI<sup>beta</sup></a>
+                    <a href="/" class="font-logo text-2xl font-bold tracking-tighter">KAI</a>
                     <nav class="hidden md:flex space-x-6">
                         <a href="#features" class="text-sm font-medium hover:text-white transition-colors">Özellikler</a>
                         <a href="#teamwork" class="text-sm font-medium hover:text-white transition-colors">Ekip Çalışması</a>
+                        <a href="/pricing.php" class="text-sm font-medium hover:text-white transition-colors">Fiyatlandırma</a>
                         <a href="#faq" class="text-sm font-medium hover:text-white transition-colors">S.S.S.</a>
                     </nav>
                 </div>
@@ -36,7 +37,7 @@
                             </div>
                         </div>
                     </div>
-                    <a href="/app" class="hidden sm:block text-sm font-semibold px-4 py-2 rounded-md transition-colors" style="background-color: var(--color-button-primary-bg); color: var(--color-button-primary-text);" onmouseover="this.style.backgroundColor='var(--color-button-primary-hover-bg)'" onmouseout="this.style.backgroundColor='var(--color-button-primary-bg)'">Uygulamaya Git</a>
+                    <a href="/auth/login.php" class="hidden sm:block text-sm font-semibold px-4 py-2 rounded-md transition-colors" style="background-color: var(--color-button-primary-bg); color: var(--color-button-primary-text);" onmouseover="this.style.backgroundColor='var(--color-button-primary-hover-bg)'" onmouseout="this.style.backgroundColor='var(--color-button-primary-bg)'">Uygulamaya Git</a>
                     <div class="md:hidden">
                         <button id="mobile-menu-button" type="button" class="inline-flex items-center justify-center p-2 rounded-md hover:bg-white/10" style="color: var(--color-text-secondary);" onmouseover="this.style.color='var(--color-text-primary)'" onmouseout="this.style.color='var(--color-text-secondary)'">
                             <span class="sr-only">Menüyü aç</span>
@@ -53,7 +54,7 @@
                 <a href="#features" class="text-base font-medium hover:text-white transition-colors px-2 py-1 rounded-md" style="color: var(--color-text-secondary);">Özellikler</a>
                 <a href="#teamwork" class="text-base font-medium hover:text-white transition-colors px-2 py-1 rounded-md" style="color: var(--color-text-secondary);">Ekip Çalışması</a>
                 <a href="#faq" class="text-base font-medium hover:text-white transition-colors px-2 py-1 rounded-md" style="color: var(--color-text-secondary);">S.S.S.</a>
-                <a href="/app" class="w-full text-center text-sm font-semibold px-4 py-2.5 rounded-md transition-colors mt-4" style="background-color: var(--color-button-primary-bg); color: var(--color-button-primary-text);" onmouseover="this.style.backgroundColor='var(--color-button-primary-hover-bg)'" onmouseout="this.style.backgroundColor='var(--color-button-primary-bg)'">Uygulamaya Git</a>
+                <a href="/auth/login.php" class="w-full text-center text-sm font-semibold px-4 py-2.5 rounded-md transition-colors mt-4" style="background-color: var(--color-button-primary-bg); color: var(--color-button-primary-text);" onmouseover="this.style.backgroundColor='var(--color-button-primary-hover-bg)'" onmouseout="this.style.backgroundColor='var(--color-button-primary-bg)'">Uygulamaya Git</a>
             </nav>
         </div>
     </header>
@@ -68,7 +69,7 @@
                 Pomodoro tekniği ve Kanban panolarının gücünü birleştirerek verimliliğinizi zirveye taşıyın. Görevlerinize odaklanın, projelerinizi kolayca yönetin.
             </p>
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="/app" class="w-full sm:w-auto font-semibold px-6 py-3 rounded-md transition-colors flex items-center justify-center" style="background-color: var(--color-button-primary-bg); color: var(--color-button-primary-text);" onmouseover="this.style.backgroundColor='var(--color-button-primary-hover-bg)'" onmouseout="this.style.backgroundColor='var(--color-button-primary-bg)'">
+                <a href="/auth/signup.php" class="w-full sm:w-auto font-semibold px-6 py-3 rounded-md transition-colors flex items-center justify-center" style="background-color: var(--color-button-primary-bg); color: var(--color-button-primary-text);" onmouseover="this.style.backgroundColor='var(--color-button-primary-hover-bg)'" onmouseout="this.style.backgroundColor='var(--color-button-primary-bg)'">
                     Ücretsiz Başla
                 </a>
                 <a href="#features" class="w-full sm:w-auto font-medium px-6 py-3 rounded-md transition-colors flex items-center justify-center" style="background-color: var(--color-button-secondary-bg); color: var(--color-text-primary);" onmouseover="this.style.backgroundColor='var(--color-button-secondary-hover-bg)'" onmouseout="this.style.backgroundColor='var(--color-button-secondary-bg)'">
@@ -232,7 +233,7 @@
                         <details>
                             <summary class="flex items-center justify-between p-6 cursor-pointer">
                                 <span class="font-semibold">KAI'nin ücretsiz bir sürümü var mı?</span>
-                                <svg class="w-5 h-5 transform transition-transform" style="color: var(--color-text-secondary);" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                <svg class="w-5 h-5 transform" style="color: var(--color-text-secondary);" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </summary>
                             <div class="faq-content p-6 pt-0" style="color: var(--color-text-secondary);">
                                 Evet! KAI, temel Pomodoro ve Kanban özelliklerini içeren, bireysel kullanım için tamamen ücretsiz bir plan sunmaktadır. Ekip özellikleri ve gelişmiş analitikler için ücretli planlarımızı inceleyebilirsiniz.
@@ -243,7 +244,7 @@
                         <details>
                             <summary class="flex items-center justify-between p-6 cursor-pointer">
                                 <span class="font-semibold">Verilerim güvende mi?</span>
-                                <svg class="w-5 h-5 transform transition-transform" style="color: var(--color-text-secondary);" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                <svg class="w-5 h-5 transform" style="color: var(--color-text-secondary);" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </summary>
                             <div class="faq-content p-6 pt-0" style="color: var(--color-text-secondary);">
                                 Kesinlikle. Veri güvenliği en büyük önceliğimizdir. Tüm verileriniz endüstri standardı şifreleme yöntemleriyle korunmakta ve güvenli sunucularda saklanmaktadır. Verilerinizi asla üçüncü partilerle paylaşmayız.
@@ -254,7 +255,7 @@
                         <details>
                             <summary class="flex items-center justify-between p-6 cursor-pointer">
                                 <span class="font-semibold">Hangi platformlarda kullanabilirim?</span>
-                                <svg class="w-5 h-5 transform transition-transform" style="color: var(--color-text-secondary);" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                <svg class="w-5 h-5 transform" style="color: var(--color-text-secondary);" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </summary>
                             <div class="faq-content p-6 pt-0" style="color: var(--color-text-secondary);">
                                 KAI, modern bir web tarayıcısı olan tüm cihazlarda (masaüstü, tablet, mobil) sorunsuz bir şekilde çalışır. Ayrıca, gelecekte yerel masaüstü ve mobil uygulamalar geliştirmeyi planlıyoruz.
@@ -272,7 +273,7 @@
                     <div class="relative">
                         <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-4">Verimliliğinizi Bugün Yükseltin</h2>
                         <p class="max-w-2xl mx-auto text-lg mb-8" style="color: var(--color-text-secondary);">Daha fazla ertelemeyin. KAI'ye ücretsiz katılın ve hedeflerinize ulaşmaya bir adım daha yaklaşın.</p>
-                        <a href="/app" class="inline-block font-semibold px-8 py-4 rounded-md transition-transform transform hover:scale-105" style="background-color: var(--color-button-primary-bg); color: var(--color-button-primary-text);">
+                        <a href="/auth/signup.php" class="inline-block font-semibold px-8 py-4 rounded-md transition-transform transform hover:scale-105" style="background-color: var(--color-button-primary-bg); color: var(--color-button-primary-text);">
                             Hemen Ücretsiz Başla
                         </a>
                     </div>
@@ -290,7 +291,7 @@
                     <ul class="space-y-3">
                         <li><a href="#features" class="hover:text-white transition-colors" style="color: var(--color-text-secondary);">Özellikler</a></li>
                         <li><a href="#pricing" class="hover:text-white transition-colors" style="color: var(--color-text-secondary);">Fiyatlandırma</a></li>
-                        <li><a href="/app" class="hover:text-white transition-colors" style="color: var(--color-text-secondary);">Giriş Yap</a></li>
+                        <li><a href="/auth/login.php" class="hover:text-white transition-colors" style="color: var(--color-text-secondary);">Giriş Yap</a></li>
                     </ul>
                 </div>
                 <div class="space-y-4">
@@ -319,14 +320,15 @@
 
             <div class="border-t pt-8 mt-8 flex flex-col-reverse sm:flex-row justify-between items-center" style="border-color: var(--color-border);">
                 <p class="text-sm mt-4 sm:mt-0" style="color: var(--color-text-secondary);">
-                    &copy; 2025 KAI. Tüm Hakları Saklıdır.
+                    &copy; 2024 KAI. Tüm Hakları Saklıdır.
                 </p>
                 <div class="text-sm" style="color: var(--color-text-secondary);">
-                    powered by <a href="https://lumeworks.com" target="_blank" rel="noopener noreferrer" class="font-semibold text-white hover:underline">lumeworks</a>
+                    powered by <a href="https://lumeworks.co" target="_blank" rel="noopener noreferrer" class="font-semibold text-white hover:underline">lumeworks</a>
                 </div>
             </div>
         </div>
     </footer>
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
