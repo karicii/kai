@@ -18,10 +18,10 @@
                     </ul>
                 </div>
                 <div class="space-y-4">
-                    <h3 class="font-semibold text-white">Şirket</h3>
+                    <h3 class="font-semibold text-white">Biz</h3>
                     <ul class="space-y-3">
                         <li><a href="#" class="hover:text-white transition-colors" style="color: var(--color-text-secondary);">Hakkımızda</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors" style="color: var(--color-text-secondary);">İletişim</a></li>
+                        <li><a href="/contact.php" class="hover:text-white transition-colors" style="color: var(--color-text-secondary);">İletişim</a></li>
                     </ul>
                 </div>
                 <div class="space-y-4">

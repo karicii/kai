@@ -21,7 +21,6 @@ $legal_content = '
     <h2>3. Kişisel Verilerin Aktarılması</h2>
     <p>Kişisel verileriniz, yasal düzenlemelerin öngördüğü kapsamda, faaliyetlerimizi yürütmek üzere hizmet aldığımız iş ortaklarımızla ve kanunen yetkili kamu kurumları ve özel kişilerle paylaşılabilecektir.</p>
 ';
-// --- ÖRNEK METİN SONU ---
 ?>
 <?php require_once 'core/includes/header.php'; ?>
 
@@ -36,8 +35,8 @@ $legal_content = '
                     <article class="text-content">
                         <?php echo $legal_content; ?>
                     </article>
+                    </div>
                 </div>
-            </div>
         </section>
     </main>
 
