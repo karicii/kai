@@ -1,0 +1,40 @@
+.changelog-timeline {
+    position: relative;
+    padding-left: 2rem; 
+}
+
+.changelog-timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 1rem;
+    bottom: 1rem;
+    width: 2px;
+    background-color: var(--color-border);
+}
+
+.changelog-entry {
+    position: relative;
+}
+
+.changelog-entry::before {
+    content: '';
+    position: absolute;
+    left: -2rem; 
+    top: 0.6rem;
+    width: 14px;
+    height: 14px;
+    border-radius: 9999px;
+    background-color: var(--color-surface);
+    border: 2px solid var(--color-border);
+    transform: translateX(-6px);
+}
+
+.changelog-tag {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1.25;
+}

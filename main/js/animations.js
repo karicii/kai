@@ -102,4 +102,33 @@ document.addEventListener('DOMContentLoaded', function () {
             ease: "power3.out"
         });
     }
+
+    const comparisonSection = document.querySelector('#feature-comparison');
+    if(comparisonSection) {
+         gsap.from(comparisonSection.querySelector('table'), {
+            scrollTrigger: {
+                trigger: comparisonSection,
+                start: "top 85%",
+            },
+            opacity: 0,
+            y: 40,
+            duration: 0.8,
+            ease: "power3.out"
+        });
+    }
+
+    const changelogSection = document.querySelector('#changelog');
+    if(changelogSection) {
+        gsap.from(changelogSection.querySelectorAll('.changelog-entry'), {
+            scrollTrigger: {
+                trigger: changelogSection,
+                start: "top 80%",
+            },
+            opacity: 0,
+            y: 40,
+            duration: 0.6,
+            stagger: 0.2,
+            ease: "power3.out"
+        });
+    }
 });
