@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c3fb7b12-177b-40fb-b885-1e49e287cbaa" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/core/includes/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/includes/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/includes/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/includes/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/main/css/style.css" afterDir="false" />
-    </list>
+    <list default="true" id="c3fb7b12-177b-40fb-b885-1e49e287cbaa" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,10 +10,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="30glVD8LPEpxVrwcknLEhD74JV5" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -27,6 +23,7 @@
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main"
   }
 }]]></component>

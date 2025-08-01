@@ -2,9 +2,6 @@
 require_once 'core/config.php'; 
 $page_title = "KVKK Aydınlatma Metni - KAI";
 $page_specific_css = ["/main/css/pages/txtpage.css"];
-
-// --- ÖRNEK METİN ---
-// Bu bölüm, gelecekte veritabanından veya bir metin dosyasından dinamik olarak çekilebilir.
 $legal_content = '
     <h2>1. Veri Sorumlusunun Kimliği</h2>
     <p>Bu aydınlatma metni, 6698 sayılı Kişisel Verilerin Korunması Kanunu (“Kanun”) uyarınca, veri sorumlusu sıfatıyla KAI (“Şirket”) tarafından hazırlanmıştır. Kişisel verileriniz, aşağıda açıklanan kapsamda işlenebilecektir.</p>
