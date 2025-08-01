@@ -152,7 +152,7 @@
                         <p class="mt-2 text-sm" style="color: var(--color-text-secondary);">Büyük takımlar ve şirketler için.</p>
                         <div class="mt-6">
                             <span class="text-5xl font-extrabold">$30</span>
-                            <span class="text-lg font-medium" style="color: var(--color-text-secondary);">/ yıllık</span>
+                            <span class="text-lg font-medium" style="color: var(--color-text-secondary);">/ kullanıcı / yıllık</span>
                         </div>
                         <ul class="mt-8 space-y-4 text-sm flex-grow">
                             <li class="flex items-center"><svg class="w-4 h-4 mr-2" style="color: var(--color-text-primary);" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Pro'daki Her Şey</li>
@@ -162,6 +162,55 @@
                         </ul>
                         <a href="/auth/signup.php?plan=team" class="w-full mt-8 text-center font-semibold py-3 rounded-md transition-colors" style="background-color: var(--color-button-secondary-bg); color: var(--color-text-primary);" onmouseover="this.style.backgroundColor='var(--color-button-secondary-hover-bg)'" onmouseout="this.style.backgroundColor='var(--color-button-secondary-bg)'">Bize Ulaşın</a>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="feature-comparison" class="relative z-10 py-20 md:py-32">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-4">Planları Karşılaştırın</h2>
+                    <p class="text-lg" style="color: var(--color-text-secondary);">Tüm özelliklerimizi bir arada görün ve sizin için en doğru planı bulun.</p>
+                </div>
+                <div class="mt-16 max-w-5xl mx-auto overflow-x-auto">
+                    <table class="w-full text-sm text-left">
+                        <thead class="border-b" style="border-color: var(--color-border);">
+                            <tr>
+                                <th class="p-4 w-1/3">Özellikler</th>
+                                <th class="p-4 text-center">Bireysel</th>
+                                <th class="p-4 text-center">Pro</th>
+                                <th class="p-4 text-center">Ekip</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b" style="border-color: var(--color-border);"><td class="p-4 font-semibold" colspan="4">Temel Özellikler</td></tr>
+                            <tr class="border-b" style="border-color: var(--color-border);">
+                                <td class="p-4" style="color: var(--color-text-secondary);">Projeler</td>
+                                <td class="p-4 text-center">3 Proje</td>
+                                <td class="p-4 text-center">Sınırsız</td>
+                                <td class="p-4 text-center">Sınırsız</td>
+                            </tr>
+                            <tr class="border-b" style="border-color: var(--color-border);">
+                                <td class="p-4" style="color: var(--color-text-secondary);">Pomodoro Zamanlayıcı</td>
+                                <td class="p-4 text-center"><svg class="w-5 h-5 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg></td>
+                                <td class="p-4 text-center"><svg class="w-5 h-5 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg></td>
+                                <td class="p-4 text-center"><svg class="w-5 h-5 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg></td>
+                            </tr>
+                             <tr class="border-b" style="border-color: var(--color-border);"><td class="p-4 font-semibold" colspan="4">Ekip Özellikleri</td></tr>
+                             <tr class="border-b" style="border-color: var(--color-border);">
+                                <td class="p-4" style="color: var(--color-text-secondary);">Ekip Üyeleri</td>
+                                <td class="p-4 text-center">-</td>
+                                <td class="p-4 text-center">5 Üye</td>
+                                <td class="p-4 text-center">Sınırsız</td>
+                            </tr>
+                            <tr class="border-b" style="border-color: var(--color-border);">
+                                <td class="p-4" style="color: var(--color-text-secondary);">Paylaşılan Panolar</td>
+                                <td class="p-4 text-center">-</td>
+                                <td class="p-4 text-center"><svg class="w-5 h-5 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg></td>
+                                <td class="p-4 text-center"><svg class="w-5 h-5 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </section>
@@ -177,7 +226,7 @@
                         <details>
                             <summary class="flex items-center justify-between p-6 cursor-pointer">
                                 <span class="font-semibold">Planımı istediğim zaman değiştirebilir miyim?</span>
-                                <svg class="w-5 h-5 transform transition-transform" style="color: var(--color-text-secondary);" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                <svg class="w-5 h-5 transform" style="color: var(--color-text-secondary);" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </summary>
                             <div class="faq-content p-6 pt-0" style="color: var(--color-text-secondary);">
                                 Evet, planınızı istediğiniz zaman yükseltebilir veya düşürebilirsiniz. Değişiklikler bir sonraki fatura döneminizde geçerli olur.
@@ -187,11 +236,33 @@
                     <div class="faq-item border rounded-lg" style="border-color: var(--color-border);">
                         <details>
                             <summary class="flex items-center justify-between p-6 cursor-pointer">
+                                <span class="font-semibold">Yıllık ödemelerde indirim var mı?</span>
+                                <svg class="w-5 h-5 transform" style="color: var(--color-text-secondary);" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </summary>
+                            <div class="faq-content p-6 pt-0" style="color: var(--color-text-secondary);">
+                                Evet! Pro ve Ekip planlarında yıllık ödemeyi tercih ederseniz 2 ay ücretsiz kullanım hakkı kazanırsınız. Bu, yaklaşık %17'lik bir indirime denk gelmektedir.
+                            </div>
+                        </details>
+                    </div>
+                    <div class="faq-item border rounded-lg" style="border-color: var(--color-border);">
+                        <details>
+                            <summary class="flex items-center justify-between p-6 cursor-pointer">
                                 <span class="font-semibold">Hangi ödeme yöntemlerini kabul ediyorsunuz?</span>
-                                <svg class="w-5 h-5 transform transition-transform" style="color: var(--color-text-secondary);" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                <svg class="w-5 h-5 transform" style="color: var(--color-text-secondary);" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </summary>
                             <div class="faq-content p-6 pt-0" style="color: var(--color-text-secondary);">
                                 Tüm yaygın kredi kartlarını (Visa, MasterCard, American Express) ve PayPal'ı kabul ediyoruz. Kurumsal planlar için banka transferi seçeneğimiz de mevcuttur.
+                            </div>
+                        </details>
+                    </div>
+                    <div class="faq-item border rounded-lg" style="border-color: var(--color-border);">
+                        <details>
+                            <summary class="flex items-center justify-between p-6 cursor-pointer">
+                                <span class="font-semibold">Verilerimi dışa aktarabilir miyim?</span>
+                                <svg class="w-5 h-5 transform" style="color: var(--color-text-secondary);" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </summary>
+                            <div class="faq-content p-6 pt-0" style="color: var(--color-text-secondary);">
+                                Evet, Pro ve Ekip planı kullanıcıları tüm proje ve görev verilerini CSV veya JSON formatında dışa aktarabilirler. Verileriniz her zaman size aittir.
                             </div>
                         </details>
                     </div>
@@ -300,6 +371,20 @@
                             );
                         }
                     });
+                });
+            }
+
+            const comparisonSection = document.querySelector('#feature-comparison');
+            if(comparisonSection) {
+                 gsap.from(comparisonSection.querySelector('table'), {
+                    scrollTrigger: {
+                        trigger: comparisonSection,
+                        start: "top 85%",
+                    },
+                    opacity: 0,
+                    y: 40,
+                    duration: 0.8,
+                    ease: "power3.out"
                 });
             }
         });

@@ -1,0 +1,55 @@
+.interactive-card {
+    position: relative;
+    background: linear-gradient(to bottom right, rgba(255,255,255,0.05), rgba(255,255,255,0));
+    padding: 1px;
+    border-radius: 1rem; 
+    transition: all 0.3s ease;
+}
+
+.interactive-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 1rem; 
+    background: radial-gradient(400px circle at var(--mouse-x) var(--mouse-y), rgba(59, 130, 246, 0.2), transparent 40%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.interactive-card:hover::before {
+    opacity: 1;
+}
+
+.interactive-card-content {
+    background-color: var(--color-surface);
+    padding: 2rem;
+    border-radius: calc(1rem - 1px);
+    height: 100%;
+}
+
+.interactive-card .arrow-icon {
+    opacity: 0;
+    transform: translate(-10px, 10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.interactive-card:hover .arrow-icon {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+.faq-item summary svg {
+    transition: transform 0.3s ease-in-out;
+}
+
+.faq-item details[open] summary svg {
+    transform: rotate(180deg);
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-content {
+    overflow: hidden;
+}
