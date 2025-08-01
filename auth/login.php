@@ -1,3 +1,4 @@
+<?php require_once '../core/config.php'; ?>
 <!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -10,89 +11,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@700&display=swap" rel="stylesheet">
-
-    <style>
-        :root {
-            --color-background: #0A0A0A;
-            --color-text-primary: #EAEAEA;
-            --color-text-secondary: #A3A3A3;
-            --color-border: rgba(255, 255, 255, 0.15);
-            --color-input-bg: #1C1C1C;
-            --color-accent: #3B82F6;
-            --color-accent-glow-1: #583B85;
-            --color-accent-glow-2: #2E638E;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--color-background);
-            color: var(--color-text-primary);
-            overflow: hidden;
-        }
-        
-        .font-logo {
-            font-family: 'Lexend', sans-serif;
-        }
-
-        .social-button {
-            background-color: transparent;
-            border: 1px solid var(--color-border);
-            transition: background-color 0.2s;
-        }
-        .social-button:hover {
-            background-color: var(--color-input-bg);
-        }
-        
-        .form-input {
-            background-color: var(--color-input-bg);
-            border: 1px solid var(--color-border);
-            transition: border-color 0.2s, box-shadow 0.2s;
-        }
-        .form-input:focus {
-            border-color: var(--color-accent);
-            box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
-        }
-        
-        .aurora-background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            mix-blend-mode: color-dodge;
-            pointer-events: none;
-            z-index: -1;
-        }
-
-        .aurora-background::before,
-        .aurora-background::after {
-            content: '';
-            position: absolute;
-            width: 800px;
-            height: 600px;
-            left: 50%;
-            top: 50%;
-            background-image: radial-gradient(circle, var(--color-accent-glow-1) 0%, transparent 60%);
-            animation: aurora-glow 15s linear infinite alternate;
-        }
-        
-        .aurora-background::after {
-            background-image: radial-gradient(circle, var(--color-accent-glow-2) 0%, transparent 60%);
-            animation: aurora-glow-2 20s linear infinite alternate;
-        }
-
-        @keyframes aurora-glow {
-            0% { transform: translate(-30%, -40%) scale(1); opacity: 0.4; }
-            50% { transform: translate(-60%, -60%) scale(1.2); opacity: 0.6; }
-            100% { transform: translate(-30%, -40%) scale(1); opacity: 0.4; }
-        }
-
-        @keyframes aurora-glow-2 {
-            0% { transform: translate(30%, 40%) scale(1.2); opacity: 0.3; }
-            50% { transform: translate(60%, 20%) scale(1); opacity: 0.5; }
-            100% { transform: translate(30%, 40%) scale(1.2); opacity: 0.3; }
-        }
-    </style>
+    
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>/auth/css/style.css">
 </head>
 <body class="flex items-center justify-center min-h-screen p-4">
     
@@ -100,7 +20,7 @@
 
     <div class="relative w-full max-w-sm mx-auto">
         <div class="text-center mb-8">
-            <a href="/" class="font-logo text-3xl font-bold tracking-tighter">KAI</a>
+            <a href="<?php echo BASE_URL; ?>/" class="font-logo text-3xl font-bold tracking-tighter">KAI</a>
         </div>
 
         <div class="bg-[#121212]/80 backdrop-blur-sm p-8 rounded-xl border border-[var(--color-border)]">
@@ -133,13 +53,13 @@
                     <label for="password" class="sr-only">Şifre</label>
                     <input type="password" name="password" id="password" placeholder="Şifreniz" required class="form-input w-full px-3 py-2.5 rounded-md text-sm placeholder-gray-500 focus:outline-none">
                 </div>
-                <button type="submit" class="w-full bg-white text-black font-semibold py-2.5 rounded-md hover:bg-gray-200 transition-colors">Devam Et</button>
+                <button type="submit" class="w-full font-semibold py-2.5 rounded-md transition-colors" style="background-color: var(--color-button-primary-bg); color: var(--color-button-primary-text);" onmouseover="this.style.backgroundColor='var(--color-button-primary-hover-bg)'" onmouseout="this.style.backgroundColor='var(--color-button-primary-bg)'">Devam Et</button>
             </form>
         </div>
 
         <div class="text-center mt-6">
             <p class="text-sm" style="color: var(--color-text-secondary);">
-                Hesabın yok mu? <a href="/auth/signup.php" class="font-medium text-white hover:underline">Kayıt Ol</a>
+                Hesabın yok mu? <a href="<?php echo BASE_URL; ?>/auth/signup.php" class="font-medium text-white hover:underline">Kayıt Ol</a>
             </p>
         </div>
     </div>

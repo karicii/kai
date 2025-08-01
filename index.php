@@ -1,25 +1,31 @@
+<?php require_once 'core/config.php'; ?>
 <!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KAI - Odaklanmanın En Akıllı Yolu</title>
+    
     <script src="https://cdn.tailwindcss.com"></script>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lexend:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="main/css/style.css"></link>
+
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>/main/css/base.css">
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>/main/css/components/animations.css">
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>/main/css/components/cards.css">
 </head>
 <body>
- <header>
+    <header>
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
                 <div class="flex items-center space-x-8">
-                    <a href="/" class="font-logo text-2xl font-bold tracking-tighter">KAI</a>
+                    <a href="<?php echo BASE_URL; ?>/" class="font-logo text-2xl font-bold tracking-tighter">KAI</a>
                     <nav class="hidden md:flex space-x-6">
                         <a href="#features" class="text-sm font-medium hover:text-white transition-colors">Özellikler</a>
                         <a href="#teamwork" class="text-sm font-medium hover:text-white transition-colors">Ekip Çalışması</a>
-                        <a href="/pricing.php" class="text-sm font-medium hover:text-white transition-colors">Fiyatlandırma</a>
+                        <a href="<?php echo BASE_URL; ?>/pricing.php" class="text-sm font-medium hover:text-white transition-colors">Fiyatlandırma</a>
                         <a href="#faq" class="text-sm font-medium hover:text-white transition-colors">S.S.S.</a>
                     </nav>
                 </div>
@@ -37,7 +43,7 @@
                             </div>
                         </div>
                     </div>
-                    <a href="/auth/login.php" class="hidden sm:block text-sm font-semibold px-4 py-2 rounded-md transition-colors" style="background-color: var(--color-button-primary-bg); color: var(--color-button-primary-text);" onmouseover="this.style.backgroundColor='var(--color-button-primary-hover-bg)'" onmouseout="this.style.backgroundColor='var(--color-button-primary-bg)'">Uygulamaya Git</a>
+                    <a href="<?php echo BASE_URL; ?>/auth/login.php" class="hidden sm:block text-sm font-semibold px-4 py-2 rounded-md transition-colors" style="background-color: var(--color-button-primary-bg); color: var(--color-button-primary-text);" onmouseover="this.style.backgroundColor='var(--color-button-primary-hover-bg)'" onmouseout="this.style.backgroundColor='var(--color-button-primary-bg)'">Uygulamaya Git</a>
                     <div class="md:hidden">
                         <button id="mobile-menu-button" type="button" class="inline-flex items-center justify-center p-2 rounded-md hover:bg-white/10" style="color: var(--color-text-secondary);" onmouseover="this.style.color='var(--color-text-primary)'" onmouseout="this.style.color='var(--color-text-secondary)'">
                             <span class="sr-only">Menüyü aç</span>
@@ -53,8 +59,9 @@
             <nav class="flex flex-col space-y-4">
                 <a href="#features" class="text-base font-medium hover:text-white transition-colors px-2 py-1 rounded-md" style="color: var(--color-text-secondary);">Özellikler</a>
                 <a href="#teamwork" class="text-base font-medium hover:text-white transition-colors px-2 py-1 rounded-md" style="color: var(--color-text-secondary);">Ekip Çalışması</a>
+                <a href="<?php echo BASE_URL; ?>/pricing.php" class="text-base font-medium hover:text-white transition-colors px-2 py-1 rounded-md" style="color: var(--color-text-secondary);">Fiyatlandırma</a>
                 <a href="#faq" class="text-base font-medium hover:text-white transition-colors px-2 py-1 rounded-md" style="color: var(--color-text-secondary);">S.S.S.</a>
-                <a href="/auth/login.php" class="w-full text-center text-sm font-semibold px-4 py-2.5 rounded-md transition-colors mt-4" style="background-color: var(--color-button-primary-bg); color: var(--color-button-primary-text);" onmouseover="this.style.backgroundColor='var(--color-button-primary-hover-bg)'" onmouseout="this.style.backgroundColor='var(--color-button-primary-bg)'">Uygulamaya Git</a>
+                <a href="<?php echo BASE_URL; ?>/auth/login.php" class="w-full text-center text-sm font-semibold px-4 py-2.5 rounded-md transition-colors mt-4" style="background-color: var(--color-button-primary-bg); color: var(--color-button-primary-text);" onmouseover="this.style.backgroundColor='var(--color-button-primary-hover-bg)'" onmouseout="this.style.backgroundColor='var(--color-button-primary-bg)'">Uygulamaya Git</a>
             </nav>
         </div>
     </header>
@@ -69,7 +76,7 @@
                 Pomodoro tekniği ve Kanban panolarının gücünü birleştirerek verimliliğinizi zirveye taşıyın. Görevlerinize odaklanın, projelerinizi kolayca yönetin.
             </p>
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="/auth/signup.php" class="w-full sm:w-auto font-semibold px-6 py-3 rounded-md transition-colors flex items-center justify-center" style="background-color: var(--color-button-primary-bg); color: var(--color-button-primary-text);" onmouseover="this.style.backgroundColor='var(--color-button-primary-hover-bg)'" onmouseout="this.style.backgroundColor='var(--color-button-primary-bg)'">
+                <a href="<?php echo BASE_URL; ?>/auth/signup.php" class="w-full sm:w-auto font-semibold px-6 py-3 rounded-md transition-colors flex items-center justify-center" style="background-color: var(--color-button-primary-bg); color: var(--color-button-primary-text);" onmouseover="this.style.backgroundColor='var(--color-button-primary-hover-bg)'" onmouseout="this.style.backgroundColor='var(--color-button-primary-bg)'">
                     Ücretsiz Başla
                 </a>
                 <a href="#features" class="w-full sm:w-auto font-medium px-6 py-3 rounded-md transition-colors flex items-center justify-center" style="background-color: var(--color-button-secondary-bg); color: var(--color-text-primary);" onmouseover="this.style.backgroundColor='var(--color-button-secondary-hover-bg)'" onmouseout="this.style.backgroundColor='var(--color-button-secondary-bg)'">
@@ -273,7 +280,7 @@
                     <div class="relative">
                         <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-4">Verimliliğinizi Bugün Yükseltin</h2>
                         <p class="max-w-2xl mx-auto text-lg mb-8" style="color: var(--color-text-secondary);">Daha fazla ertelemeyin. KAI'ye ücretsiz katılın ve hedeflerinize ulaşmaya bir adım daha yaklaşın.</p>
-                        <a href="/auth/signup.php" class="inline-block font-semibold px-8 py-4 rounded-md transition-transform transform hover:scale-105" style="background-color: var(--color-button-primary-bg); color: var(--color-button-primary-text);">
+                        <a href="<?php echo BASE_URL; ?>/auth/signup.php" class="inline-block font-semibold px-8 py-4 rounded-md transition-transform transform hover:scale-105" style="background-color: var(--color-button-primary-bg); color: var(--color-button-primary-text);">
                             Hemen Ücretsiz Başla
                         </a>
                     </div>
@@ -290,8 +297,8 @@
                     <h3 class="font-semibold text-white">Ürün</h3>
                     <ul class="space-y-3">
                         <li><a href="#features" class="hover:text-white transition-colors" style="color: var(--color-text-secondary);">Özellikler</a></li>
-                        <li><a href="#pricing" class="hover:text-white transition-colors" style="color: var(--color-text-secondary);">Fiyatlandırma</a></li>
-                        <li><a href="/auth/login.php" class="hover:text-white transition-colors" style="color: var(--color-text-secondary);">Giriş Yap</a></li>
+                        <li><a href="<?php echo BASE_URL; ?>/pricing.php" class="hover:text-white transition-colors" style="color: var(--color-text-secondary);">Fiyatlandırma</a></li>
+                        <li><a href="<?php echo BASE_URL; ?>/auth/login.php" class="hover:text-white transition-colors" style="color: var(--color-text-secondary);">Giriş Yap</a></li>
                     </ul>
                 </div>
                 <div class="space-y-4">
@@ -323,16 +330,17 @@
                     &copy; 2024 KAI. Tüm Hakları Saklıdır.
                 </p>
                 <div class="text-sm" style="color: var(--color-text-secondary);">
-                    powered by <a href="https://lumeworks.co" target="_blank" rel="noopener noreferrer" class="font-semibold text-white hover:underline">lumeworks</a>
+                    powered by <a href="https://lumeworks.com" target="_blank" rel="noopener noreferrer" class="font-semibold text-white hover:underline">lumeworks</a>
                 </div>
             </div>
         </div>
     </footer>
 
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="main/js/script.js"></script>
+    <script src="<?php echo BASE_URL; ?>/main/js/main.js"></script>
+    <script src="<?php echo BASE_URL; ?>/main/js/animations.js"></script>
+    <script src="<?php echo BASE_URL; ?>/main/js/faq.js"></script>
  
 </body>
 </html>
