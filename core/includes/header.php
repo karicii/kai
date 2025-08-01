@@ -10,14 +10,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lexend:wght@700&display=swap" rel="stylesheet">
-
+    <link rel="shortcut icon" href="../main/img/fav.ico" type="image/x-icon">
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>/main/css/base.css">
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>/main/css/components/animations.css">
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>/main/css/components/cards.css">
     
-    <?php if (isset($page_specific_css)): ?>
-        <link rel="stylesheet" href="<?php echo BASE_URL . $page_specific_css; ?>">
-    <?php endif; ?>
+   <?php
+if (!empty($page_specific_css) && is_array($page_specific_css)) {
+    foreach ($page_specific_css as $css_file) {
+        // BASE_URL'i ve dosya yolunu birleştirerek doğru tam yolu oluşturuyoruz.
+        echo '<link rel="stylesheet" href="' . BASE_URL . $css_file . '">';
+    }
+}
+?>
 </head>
 <body class="antialiased">
     <header>

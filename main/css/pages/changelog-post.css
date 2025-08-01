@@ -43,3 +43,8 @@
 .article-content a:hover {
     color: var(--color-text-primary);
 }
+
+.article-content strong {
+    color: var(--color-text-primary);
+    font-weight: 600;
+}

@@ -1,0 +1,266 @@
+/* Gerekli olabilecek yeni global değişkenler (ana CSS'e eklenebilir) */
+:root {
+    --color-success: #22c55e;
+    --color-error: #ef4444;
+    --color-text-placeholder: #71717a;
+}
+
+/* ANA YAPI DÜZELTMESİ:
+  Tüm bölümü dikeyde ortalamak için flexbox kullanıyoruz.
+*/
+#contact {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 1.5rem;
+    overflow: hidden;
+}
+
+/* RENK DÜZELTMESİ:
+  Mavi/mor parlama yerine, siyah arka plan üzerinde çok soluk, beyaz bir ışık efekti.
+  Bu, renk katmadan "gölgeli" ve "premium" bir derinlik hissi verir.
+*/
+#contact::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1000px;
+    height: 1000px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.04), transparent 65%);
+    filter: blur(100px);
+    z-index: -1;
+    pointer-events: none;
+}
+
+.container {
+    width: 100%;
+    max-width: 1100px;
+    position: relative;
+    z-index: 1;
+}
+
+#contact-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+#contact-header h1 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 800;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+}
+
+#contact-header p {
+    font-size: 1.125rem;
+    color: var(--color-text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ANA FORM KONTEYNERİ */
+#contact-container {
+    display: grid;
+    /* Masaüstü için 2 sütunlu yapı */
+    grid-template-columns: 1fr 1.75fr;
+    gap: 3rem;
+    background: var(--color-surface-subtle);
+    border: 1px solid var(--color-border);
+    border-radius: 0.4rem;
+    padding: 3rem;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+
+}
+
+/* İletişim Bilgileri Paneli */
+.contact-info-panel h2 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.contact-info-panel > p {
+    color: var(--color-text-secondary);
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    background: var(--color-surface-subtle);
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+    background: var(--color-surface-hover);
+    border-color: var(--color-border);
+}
+
+.contact-icon-wrapper {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 0.75rem;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.1));
+    color: var(--color-text-primary);
+}
+
+.contact-item h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.contact-item a {
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+    color: var(--color-text-primary);
+}
+
+/* FORM YAPI DÜZELTMESİ:
+  Etiket (label) ve girdi (input) alanlarını dikeyde düzgünce hizalamak için.
+*/
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; /* Etiket ve input arası boşluk */
+}
+
+.form-label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--color-text-secondary);
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.contact-form-input {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    color: var(--color-text-primary);
+    border-radius: 0.5rem;
+    padding: 0.875rem 1rem;
+    font-size: 0.9rem;
+    transition: all 0.2s ease-in-out;
+    width: 100%; /* Genişliği doldurmasını sağlar */
+}
+
+.contact-form-input::placeholder {
+    color: var(--color-text-placeholder);
+}
+
+.contact-form-input:focus {
+    outline: none;
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+textarea.contact-form-input {
+    resize: vertical;
+    min-height: 120px;
+    font-family: inherit;
+    resize:none;
+}
+
+/* Gönder Butonu */
+.contact-submit-button {
+    align-self: flex-end; /* Butonu sağa yaslar */
+    padding: 0.875rem 2.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: var(--color-button-primary-bg);
+    color: var(--color-button-primary-text);
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-top:16px;
+}
+
+.contact-submit-button:hover {
+    transform: translateY(-2px);
+    background-color: var(--color-button-primary-hover-bg);
+    box-shadow: 0 8px 25px -5px rgba(255, 255, 255, 0.2);
+}
+
+/* Başarı/Hata Mesajları */
+.form-message {
+    padding: 1rem;
+    border-radius: 0.75rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-top: 1rem;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    display: none;
+}
+
+.form-message.show {
+    opacity: 1;
+    transform: translateY(0);
+    display: block;
+}
+
+.form-message.success {
+    background: rgba(34, 197, 94, 0.1);
+    border: 1px solid rgba(34, 197, 94, 0.3);
+    color: var(--color-success);
+}
+
+.form-message.error {
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    color: var(--color-error);
+}
+#contact-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem; /* Yaklaşık 20px. Bu değeri artırıp azaltabilirsin. */
+}
+/* Mobil için responsive düzenlemeler */
+@media (max-width: 1024px) {
+    #contact-container {
+        /* Tablet ve altında tek sütuna düşür */
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        padding: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .form-grid {
+        /* Mobil'de Ad/Soyad ve E-posta alanlarını alt alta getir */
+        grid-template-columns: 1fr;
+    }
+    #contact-container {
+        padding: 1.5rem;
+    }
+    .contact-submit-button {
+        width: 100%; /* Buton tam genişlik kaplasın */
+    }
+}
