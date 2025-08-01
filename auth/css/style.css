@@ -83,38 +83,78 @@ body {
     50% { transform: translate(60%, 20%) scale(1); opacity: 0.5; }
     100% { transform: translate(30%, 40%) scale(1.2); opacity: 0.3; }
 }
-
-/* Shape Animation (Sadece Signup Sol Panel) */
-.animation-container {
-    position: absolute;
-    inset: 0;
-    overflow: hidden;
-    filter: blur(80px);
+@keyframes pulse {
+    0% {
+        opacity: 0.1;
+        transform: scale(0.8);
+    }
+    25% {
+        opacity: 0.7;
+        transform: scale(1.2);
+    }
+    50% {
+        opacity: 0.1;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 0.1;
+        transform: scale(0.8);
+    }
 }
 
-.shape {
-    position: absolute;
+#dot-grid-container {
+    display: grid;
+    grid-template-columns: repeat(var(--cols, 0), 1fr);
+    grid-template-rows: repeat(var(--rows, 0), 1fr);
+    place-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.dot {
+    width: 4px;
+    height: 4px;
+    background-color: var(--color-text-secondary);
     border-radius: 50%;
-    background: linear-gradient(45deg, var(--color-accent-glow-1), var(--color-accent-glow-2));
+    opacity: 0;
+    animation-name: pulse;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    will-change: transform, opacity;
+}
+.kai-logo-wordmark {
+    display: inline-flex;
+    align-items: flex-start;
+    text-decoration: none;
+    color: var(--color-text-primary);
+    position: relative;
 }
 
-.shape1 {
-    width: 400px;
-    height: 400px;
-    top: 10%;
-    left: 10%;
+.logo-text {
+    font-family: 'Lexend', sans-serif;
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 1;
+    padding-right: 4px;
 }
 
-.shape2 {
-    width: 300px;
-    height: 300px;
-    bottom: 10%;
-    right: 10%;
+.logo-icon-wrapper {
+    display: inline-block;
+    position: relative;
+    top: -0.6em;
+    line-height: 0;
 }
 
-.shape3 {
-    width: 250px;
-    height: 250px;
-    bottom: 40%;
-    left: 20%;
+.logo-icon {
+    display: inline-block;
+    font-family: 'Lexend', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-accent);
+    transform: rotate(90deg);
+    transition: transform 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.kai-logo-wordmark:hover .logo-icon {
+    transform: rotate(0deg) scale(1.1);
 }

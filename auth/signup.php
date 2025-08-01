@@ -18,12 +18,7 @@
     
     <div class="flex min-h-screen">
         <div class="hidden lg:flex lg:w-1/2 bg-black/50 relative items-center justify-center p-12 text-center overflow-hidden">
-            <div class="animation-container">
-                <div class="shape shape1"></div>
-                <div class="shape shape2"></div>
-                <div class="shape shape3"></div>
-            </div>
-            <div class="aurora-background"></div>
+            <div id="dot-grid-container" class="absolute inset-0 z-0"></div>
             <div class="relative z-10">
                 <h2 class="text-4xl font-extrabold text-white mb-4">Verimliliğinizi Serbest Bırakın</h2>
                 <p class="text-lg" style="color: var(--color-text-secondary);">
@@ -35,8 +30,12 @@
         <div class="w-full lg:w-1/2 flex items-center justify-center p-8 backdrop-blur-sm lg:backdrop-blur-none">
             <div class="w-full max-w-sm mx-auto">
                 <div class="text-center lg:text-left mb-8">
-                    <a href="<?php echo BASE_URL; ?>/" class="font-logo text-3xl font-bold tracking-tighter">KAI</a>
-                </div>
+<a href="<?php echo BASE_URL; ?>/" class="kai-logo-wordmark">
+    <span class="logo-text">Kai</span>
+    <span class="logo-icon-wrapper">
+        <span class="logo-icon">K</span>
+    </span>
+</a>                </div>
 
                 <div class="bg-transparent">
                     <h1 class="text-2xl font-semibold mb-2">Hesap oluştur</h1>

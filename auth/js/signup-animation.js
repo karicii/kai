@@ -1,14 +1,29 @@
 document.addEventListener('DOMContentLoaded', function () {
-    gsap.utils.toArray('.shape').forEach(shape => {
-        gsap.to(shape, {
-            x: "random(-150, 150)",
-            y: "random(-150, 150)",
-            scale: "random(0.8, 1.5)",
-            rotation: "random(-90, 90)",
-            duration: "random(15, 30)",
-            ease: "sine.inOut",
-            repeat: -1,
-            yoyo: true
-        });
-    });
+    const container = document.getElementById('dot-grid-container');
+
+    if (!container) {
+        return;
+    }
+
+    const dotSize = 2;
+    const dotSpacing = 24;
+
+    container.innerHTML = '';
+
+    const containerRect = container.getBoundingClientRect();
+    const cols = Math.floor(containerRect.width / dotSpacing);
+    const rows = Math.floor(containerRect.height / dotSpacing);
+
+    container.style.setProperty('--cols', cols);
+    container.style.setProperty('--rows', rows);
+
+    for (let i = 0; i < rows; i++) {
+        for (let j = 0; j < cols; j++) {
+            const dot = document.createElement('div');
+            dot.classList.add('dot');
+            const delay = (i * 0.1) + (j * 0.05);
+            dot.style.animationDelay = `${delay}s`;
+            container.appendChild(dot);
+        }
+    }
 });

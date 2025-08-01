@@ -20,8 +20,12 @@
 
     <div class="relative w-full max-w-sm mx-auto">
         <div class="text-center mb-8">
-            <a href="<?php echo BASE_URL; ?>/" class="font-logo text-3xl font-bold tracking-tighter">KAI</a>
-        </div>
+<a href="<?php echo BASE_URL; ?>/" class="kai-logo-wordmark">
+    <span class="logo-text">Kai</span>
+    <span class="logo-icon-wrapper">
+        <span class="logo-icon">K</span>
+    </span>
+</a>        </div>
 
         <div class="bg-[#121212]/80 backdrop-blur-sm p-8 rounded-xl border border-[var(--color-border)]">
             <h1 class="text-xl font-semibold text-center mb-2">Hesabınıza giriş yapın</h1>
@@ -35,6 +39,14 @@
                 <button class="social-button w-full flex items-center justify-center py-2.5 rounded-md">
                     <svg class="w-5 h-5 mr-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M12,2.24C10.29,2.24,8.44,2.94,7.34,4.24c-1.34,1.52-2.1,3.6-2.1,5.47c0,3.4,2.1,5.8,5.15,5.8c1.24,0,2.24-0.4,3.19-1.2l-1.44-1.29c-0.6,0.54-1.34,0.89-2.04,0.89c-1.89,0-3.29-1.44-3.29-3.64s1.39-3.64,3.29-3.64c1.89,0,3.29,1.44,3.29,3.64c0,0.24-0.05,0.49-0.1,0.73h-3.19V9.9h4.64c0.05-0.24,0.1-0.49,0.1-0.73C16.34,5.64,14.54,2.24,12,2.24z"/></svg>
                     Apple ile Devam Et
+                </button>
+                   <button class="social-button w-full flex items-center justify-center py-2.5 rounded-md">
+                    <svg class="w-5 h-5 mr-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M12,2.24C10.29,2.24,8.44,2.94,7.34,4.24c-1.34,1.52-2.1,3.6-2.1,5.47c0,3.4,2.1,5.8,5.15,5.8c1.24,0,2.24-0.4,3.19-1.2l-1.44-1.29c-0.6,0.54-1.34,0.89-2.04,0.89c-1.89,0-3.29-1.44-3.29-3.64s1.39-3.64,3.29-3.64c1.89,0,3.29,1.44,3.29,3.64c0,0.24-0.05,0.49-0.1,0.73h-3.19V9.9h4.64c0.05-0.24,0.1-0.49,0.1-0.73C16.34,5.64,14.54,2.24,12,2.24z"/></svg>
+                    Github ile Devam Et
+                </button>
+                   <button class="social-button w-full flex items-center justify-center py-2.5 rounded-md">
+                    <svg class="w-5 h-5 mr-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M12,2.24C10.29,2.24,8.44,2.94,7.34,4.24c-1.34,1.52-2.1,3.6-2.1,5.47c0,3.4,2.1,5.8,5.15,5.8c1.24,0,2.24-0.4,3.19-1.2l-1.44-1.29c-0.6,0.54-1.34,0.89-2.04,0.89c-1.89,0-3.29-1.44-3.29-3.64s1.39-3.64,3.29-3.64c1.89,0,3.29,1.44,3.29,3.64c0,0.24-0.05,0.49-0.1,0.73h-3.19V9.9h4.64c0.05-0.24,0.1-0.49,0.1-0.73C16.34,5.64,14.54,2.24,12,2.24z"/></svg>
+                    Slack ile Devam Et
                 </button>
             </div>
 
