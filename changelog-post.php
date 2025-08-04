@@ -23,8 +23,6 @@ $post_content = '
     <h3>Gelecek Adımlar</h3>
     <p>Sıradaki hedefimiz, ekipler için detaylı analitik ve raporlama özellikleri eklemek. Geri bildirimleriniz bizim için çok değerli, <a href="/contact.php">iletişim</a> sayfasından bize ulaşmaktan çekinmeyin.</p>
 ';
-// --- ÖRNEK VERİ SONU ---
-
 ?>
 <!DOCTYPE html>
 <html lang="tr">
@@ -96,3 +94,4 @@ $post_content = '
     </footer>
 </body>
 </html>
+newgrp docker

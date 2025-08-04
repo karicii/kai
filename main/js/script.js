@@ -71,7 +71,7 @@
                         start: "top 85%",
                         toggleActions: "play none none none"
                     },
-                    opacity: 0,
+                    opacity: 0, 
                     y: 40,
                     duration: 0.6,
                     ease: "power3.out",

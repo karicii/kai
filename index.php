@@ -4,7 +4,6 @@ $page_title = "KAI - Odaklanmanın En Akıllı Yolu";
 $page_specific_js = "/main/js/faq.js";
 ?>
 <?php require_once 'core/includes/header.php'; ?>
-
     <main class="relative overflow-hidden">
         <div class="aurora-background"></div>
         <section class="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center pt-24 pb-32 md:pt-32 md:pb-40">
@@ -24,7 +23,6 @@ $page_specific_js = "/main/js/faq.js";
                 </a>
             </div>
         </section>
-
         <section id="preview" class="relative z-10 pb-20 md:pb-32">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="relative mx-auto max-w-5xl rounded-xl shadow-2xl" style="background-color: var(--color-surface); border: 1px solid var(--color-border);">
@@ -211,7 +209,6 @@ $page_specific_js = "/main/js/faq.js";
                 </div>
             </div>
         </section>
-
         <section id="cta" class="relative z-10 py-20 md:py-32">
              <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="relative text-center p-12 rounded-2xl overflow-hidden" style="background-color: var(--color-surface);">
@@ -226,7 +223,5 @@ $page_specific_js = "/main/js/faq.js";
                 </div>
              </div>
         </section>
-
     </main>
-
 <?php require_once 'core/includes/footer.php'; ?>

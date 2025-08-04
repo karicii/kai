@@ -46,7 +46,7 @@ $page_specific_js = "/main/js/faq.js"; // Bu sayfada da SSS script'i lazım
                             <li class="flex items-center"><svg class="w-4 h-4 mr-2" style="color: var(--color-text-primary);" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Detaylı Analitikler</li>
                             <li class="flex items-center"><svg class="w-4 h-4 mr-2" style="color: var(--color-text-primary);" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>5 Kişiye Kadar Ekip Üyesi</li>
                         </ul>
-                        <a href="<?php echo BASE_URL; ?>/auth/signup.php?plan=pro" class="w-full mt-8 text-center font-semibold py-3 rounded-md transition-colors" style="background-color: var(--color-accent); color: var(--color-text-primary);">Pro'yu Seç</a>
+                        <a href="<?php echo BASE_URL; ?>/auth/signup.php?plan=pro" class="w-full mt-8 text-center font-semibold py-3 rounded-md transition-colors" style="background-color: var(--color-accent); color: var(--color-text-primary);">Yakında</a>
                     </div>
 
                     <div class="flex flex-col p-8 rounded-2xl border" style="border-color: var(--color-border); background-color: var(--color-surface);">
@@ -62,7 +62,7 @@ $page_specific_js = "/main/js/faq.js"; // Bu sayfada da SSS script'i lazım
                             <li class="flex items-center"><svg class="w-4 h-4 mr-2" style="color: var(--color-text-primary);" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Öncelikli Destek</li>
                             <li class="flex items-center"><svg class="w-4 h-4 mr-2" style="color: var(--color-text-primary);" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Gelişmiş Güvenlik Seçenekleri</li>
                         </ul>
-                        <a href="<?php echo BASE_URL; ?>/auth/signup.php?plan=team" class="w-full mt-8 text-center font-semibold py-3 rounded-md transition-colors" style="background-color: var(--color-button-secondary-bg); color: var(--color-text-primary);" onmouseover="this.style.backgroundColor='var(--color-button-secondary-hover-bg)'" onmouseout="this.style.backgroundColor='var(--color-button-secondary-bg)'">Bize Ulaşın</a>
+                        <a href="<?php echo BASE_URL; ?>/auth/signup.php?plan=team" class="w-full mt-8 text-center font-semibold py-3 rounded-md transition-colors" style="background-color: var(--color-button-secondary-bg); color: var(--color-text-primary);" onmouseover="this.style.backgroundColor='var(--color-button-secondary-hover-bg)'" onmouseout="this.style.backgroundColor='var(--color-button-secondary-bg)'">Yakında</a>
                     </div>
                 </div>
             </div>

@@ -20,12 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (mobileMenuButton) {
         mobileMenuButton.addEventListener('click', function () {
-            const isHidden = mobileNav.classList.contains('-translate-y-[120%]');
-            if (isHidden) {
-                mobileNav.classList.remove('-translate-y-[120%]');
-            } else {
-                mobileNav.classList.add('-translate-y-[120%]');
-            }
+            mobileNav.classList.toggle('is-open');
         });
     }
 

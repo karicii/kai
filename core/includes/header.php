@@ -10,19 +10,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lexend:wght@700&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="../main/img/fav.ico" type="image/x-icon">
+
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>/main/css/base.css">
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>/main/css/components/animations.css">
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>/main/css/components/cards.css">
     
-   <?php
-if (!empty($page_specific_css) && is_array($page_specific_css)) {
-    foreach ($page_specific_css as $css_file) {
-        // BASE_URL'i ve dosya yolunu birleştirerek doğru tam yolu oluşturuyoruz.
-        echo '<link rel="stylesheet" href="' . BASE_URL . $css_file . '">';
-    }
-}
-?>
+    <?php if (isset($page_specific_css) && is_array($page_specific_css)): ?>
+        <?php foreach ($page_specific_css as $css_file): ?>
+            <link rel="stylesheet" href="<?php echo BASE_URL . $css_file; ?>">
+        <?php endforeach; ?>
+    <?php endif; ?>
 </head>
 <body class="antialiased">
     <header>
@@ -62,7 +59,7 @@ if (!empty($page_specific_css) && is_array($page_specific_css)) {
                 </div>
             </div>
         </div>
-        <div id="mobile-nav" class="mobile-nav md:hidden absolute top-16 inset-x-0 bg-gray-900/95 p-4 transform -translate-y-[120%] border-b" style="border-color: var(--color-border);">
+        <div id="mobile-nav" class="mobile-nav md:hidden absolute top-16 inset-x-0 bg-gray-900/95 p-4 border-b" style="border-color: var(--color-border);">
             <nav class="flex flex-col space-y-4">
                 <a href="<?php echo BASE_URL; ?>/#features" class="text-base font-medium hover:text-white transition-colors px-2 py-1 rounded-md" style="color: var(--color-text-secondary);">Özellikler</a>
                 <a href="<?php echo BASE_URL; ?>/pricing.php" class="text-base font-medium hover:text-white transition-colors px-2 py-1 rounded-md" style="color: var(--color-text-secondary);">Fiyatlandırma</a>

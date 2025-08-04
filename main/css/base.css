@@ -58,5 +58,14 @@ header nav a {
 }
 
 .mobile-nav {
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, visibility 0.3s;
+    transform: translateY(-100%);
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.mobile-nav.is-open {
+    transform: translateY(0);
+    visibility: visible;
+    pointer-events: auto;
 }

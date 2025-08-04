@@ -46,3 +46,4 @@ $legal_content = '
     </main>
 
 <?php require_once 'core/includes/footer.php'; ?>
+                    

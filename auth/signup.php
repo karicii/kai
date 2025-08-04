@@ -30,18 +30,30 @@
         <div class="w-full lg:w-1/2 flex items-center justify-center p-8 backdrop-blur-sm lg:backdrop-blur-none">
             <div class="w-full max-w-sm mx-auto">
                 <div class="text-center lg:text-left mb-8">
-<a href="<?php echo BASE_URL; ?>/" class="kai-logo-wordmark">
-    <span class="logo-text">Kai</span>
-    <span class="logo-icon-wrapper">
-        <span class="logo-icon">K</span>
-    </span>
-</a>                </div>
+                    <a href="<?php echo BASE_URL; ?>/" class="kai-logo-wordmark">
+                        <span class="logo-text">Kai</span>
+                        <span class="logo-icon-wrapper">
+                            <span class="logo-icon">K</span>
+                        </span>
+                    </a>
+                </div>
 
                 <div class="bg-transparent">
                     <h1 class="text-2xl font-semibold mb-2">Hesap oluştur</h1>
                     <p class="text-sm mb-8" style="color: var(--color-text-secondary);">Başlamak için bilgilerinizi girin.</p>
 
-                    <form action="" method="POST" class="space-y-4">
+                    <?php if (isset($_SESSION['errors'])): ?>
+                        <div class="bg-red-500/10 border border-red-500/30 text-red-300 text-sm p-4 rounded-lg mb-6">
+                            <ul class="list-disc pl-5">
+                                <?php foreach ($_SESSION['errors'] as $error): ?>
+                                    <li><?php echo htmlspecialchars($error); ?></li>
+                                <?php endforeach; ?>
+                            </ul>
+                        </div>
+                        <?php unset($_SESSION['errors']); ?>
+                    <?php endif; ?>
+
+                    <form action="signup-handler.php" method="POST" class="space-y-4">
                         <div>
                             <label for="fullname" class="sr-only">Ad Soyad</label>
                             <input type="text" name="fullname" id="fullname" placeholder="Adınız Soyadınız" required class="form-input w-full px-3 py-2.5 rounded-md text-sm placeholder-gray-500">
